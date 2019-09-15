@@ -7,9 +7,10 @@ comments: false
 sitemap: false
 category: base
 ---
-
+<!--
 {:.text-center}
 ## <i class="fa fa-paperclip" title="Featured"></i> <a href="{{ site.url }}/featured">Featured Posts</a>
+-->
 
 <hr class="style17" style="margin:1.0rem 0;">
 
@@ -36,4 +37,3 @@ category: base
   {% endif %}{% endfor %}
   </ul>
 {% endunless %}{% endfor %}
-

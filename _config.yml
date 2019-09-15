@@ -10,13 +10,9 @@ encoding: utf-8
 title:               My Website
 #tagline:             'foo's website
 description:         Foo's blog...
-url: https://lanyon-plus.sbamin.com
-baseurl: ""
-urlimg: https://lanyon-plus.sbamin.com/images/
-## If you do not have custom domain, comment top three lines, uncomment three lines below and replace dyndna with your github userid and lanyon-plus with your project name. Also, rename CNAME file to CNAME.sample
-#url: https://dyndna.github.io/lanyon-plus
-#baseurl: "/lanyon-plus"
-#urlimg: https://dyndna.github.io/lanyon-plus/images/
+url: https://sudo-hoon.github.io
+baseurl: "https://sudo-hoon.github.io"
+urlimg: https://sudo-hoon.github.io/images/
 markdown: kramdown
 kramdown:
   math_engine: mathjax
@@ -49,14 +45,14 @@ exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "l
 
 # About/contact
 author:
-  name:              Foo Boo
-  url:               https://twitter.com/abcd
-  avatar:         foo.png
+  name:              Dohoon kim
+  url:               https://sudo-hoon.github.io
+  avatar:            foo.png
   #email:           
 
 # Owner/author information
 owner:
-  name:           Foo Boo
+  name:           Dohoon kim
   avatar:         foo.png
   #email:          
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
@@ -64,41 +60,42 @@ owner:
   # Social networking links used in footer. Update and remove as you like.
   twitter:        abcd
   facebook:       
-  github:         xyz123abc
+  github:         sudo-hoon
   stackexchange:  
   linkedin:       https://www.linkedin.com/in/foo
   instagram:      
   flickr:
   tumblr:  
-  google_plus:    https://plus.google.com/+foo
+  google_plus:    
   # orcid and google scholar IDs are different than standard username.
-  orcid: xyz123abc
-  gscholar: xyz123abc
+  orcid: 
+  gscholar: 
 
 ## sidebar links:
 # For external links add external: true
 links:
-  - title: <i class="iconside iconm-home"></i> Home
+  - title: Home
     url: /
-  - title: <i class="iconside iconm-user"></i> About
+  - title: About
     url: /about/
-  - title: <i class="iconside iconm-quill"></i> Blog
+  - title: Blog
     url: /blog/
-  - title: <i class="fa fa-tags"></i> Tags
+  - title: Tags
     url: /tags/
-  - title: <i class="fa fa-archive"></i> Archive
+#  - title: <i class="fa fa-stream"></i> Category
+#    url: /category/
+  - title:  Archive
     url: /archive/
-  - title: <i class="iconside iconm-wordpress"></i> Old Blog
-    url: https://foo.wordpress.com
-    external: true
-  - title: <i class="iconside iconm-envelop"></i> Contact
+  - title: Contact
     url: /contact/
-  - title: <i class="iconside iconm-twitter"></i> Twitter
-    url: https://twitter.com/abcd
-    external: true
-  - title: <i class="iconside iconm-feed2"></i> Feed
+#  - title: <i class="iconside iconm-twitter"></i> Twitter
+#    url: https://twitter.com/abcd
+#    external: true
+  - title: Feed
     url: /feed.xml
 
+category_title: Category
+category_dir: /category/
 # Google Custom Search:
 #google_search: xyz123abc
 
@@ -112,7 +109,4 @@ disqus_shortname: foo
 # Analytics and webmaster tools stuff goes here
 #google_analytics:   xyz123abc
 
-#### For dummy website only - remove if you wish ####
-github_repo: https://github.com/dyndna/lanyon-plus
-version: 1.1.1
 ## END ##
