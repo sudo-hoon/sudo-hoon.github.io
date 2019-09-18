@@ -13,7 +13,7 @@ tags:
   - common_tag
 show_meta: true
 comments: true
-mathjax: true
+
 gistembed: true
 published: true
 noindex: false
@@ -30,6 +30,7 @@ summaryfeed: false
 videofeature: "https://www.youtube.com/embed/iG9CE55wbtY"
 imagefeature: "http://img.youtube.com/vi/iG9CE55wbtY/0.jpg"
 videocredit: tedtalks
+use_math: true
 ---
 
 Howdy! This is an example blog post that shows features supported in **lanyon-plus** theme. See [raw post](https://raw.githubusercontent.com/dyndna/lanyon-plus/master/_posts/2013-01-01-example-content.md) for required YAML header and liquid tag specifications.
@@ -202,8 +203,6 @@ Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna m
 
 ### Embed video
 
-{% include youtube.html %}
-
 ### Embed picture
 
 {:.text-center img}
@@ -213,7 +212,7 @@ Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna m
 
 [MahJax source - link open in new window](http://haixing-hu.github.io/programming/2013/09/20/how-to-use-mathjax-in-jekyll-generated-github-pages/){:target="_blank"}
 
-### MathJax
+### MathJax 
 
 Let's test some inline math $x$, $y$, $x_1$, $y_1$.
 

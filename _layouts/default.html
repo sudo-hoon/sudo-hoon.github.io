@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<!--  
-====================================================
-Homepage: {{ site.url }}
-Credits: {{ site.url }}/disclosure
-====================================================
--->
-{% include head.html %}
 
-<body>
+  {% include head.html %}
 
-{% include sidebar.html %}
+  <body>
+    {% if page.use_math %}
+      {% include mathjax_support.html %}
+    {% endif %}
+
+    {% include sidebar.html %}
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
@@ -18,20 +16,14 @@ Credits: {{ site.url }}/disclosure
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <!-- <small>{{ site.tagline }}</small> -->
-            <div class="headicons">
-              <small><a href="{{ site.url }}/about" rel="me" title="About"><i class="iconm iconm-user"></i></a></small>
-              <small><a href="{{ site.url }}/blog" rel="me" title="Blog"><i class="iconm iconm-quill"></i></a></small>
-              <small><a href="{{ site.url }}/contact" rel="me" title="Contact"><i class="iconm iconm-envelop"></i></a></small> 
-            </div>           
+            <a href="{{ site.url }}/" title="Home">{{ site.title }}</a>
+            <small>{{ site.tagline }}</small>
           </h3>
         </div>
       </div>
 
       <div class="container content">
         {{ content }}
-        {% include footer.html %}
       </div>
     </div>
 
@@ -54,6 +46,6 @@ Credits: {{ site.url }}/disclosure
         }, false);
       })(document);
     </script>
-    {% include scripts.html %}
-</body>
+    <script id="dsq-count-scr" src="//https-sudo-hoon-github-io.disqus.com/count.js" async></script>
+  </body>
 </html>

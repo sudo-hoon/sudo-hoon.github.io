@@ -1,112 +1,54 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-#permalink:           pretty
-permalink: /blog/:year/:month/:day/:title/
-relative_permalinks: false
-encoding: utf-8
+permalink:           pretty
+#relative_permalinks: true
 
 # Setup
-title:               My Website
-#tagline:             'foo's website
-description:         Foo's blog...
-url: https://sudo-hoon.github.io
-baseurl: "https://sudo-hoon.github.io"
-urlimg: https://sudo-hoon.github.io/images/
+title:               '$ sudo hoon'
+tagline:             'System Software Engineer'
+description:         'Robot Navigation, Embedded linux...'
+url:                 https://sudo-hoon.github.io
+baseurl:             'https://sudo-hoon.github.io'
+paginate:            5
 markdown: kramdown
-kramdown:
-  math_engine: mathjax
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-paginate: 5
-paginate_path: "/blog/page:num"
-excerpt_separator: <!--more-->
-default_bg: sitebg.jpg
-default_logo: sitelogo.png
-safe: false
-#timezone:    America/Chicago
-future:      true
-
-
-## code highlight options
-syntax_highlighter: rouge
-input: GFM
-
-gems:
-  - github-pages
-  - font-awesome-sass
-  - jekyll-redirect-from
-  - jekyll-mentions
-
-jekyll-mentions:
-  base_url: https://twitter.com
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "rakefile", "README.md", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "LICENSE", "vendor", "assets", "_plugins", "public/dormant"]
 
 # About/contact
 author:
-  name:              Dohoon kim
+  name:              KIM DO HOON
   url:               https://sudo-hoon.github.io
-  avatar:            foo.png
-  #email:           
+  email:             dohoon19.kim@gmail.com
 
-# Owner/author information
-owner:
-  name:           Dohoon kim
-  avatar:         foo.png
-  #email:          
-  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        abcd
-  facebook:       
-  github:         sudo-hoon
-  stackexchange:  
-  linkedin:       https://www.linkedin.com/in/foo
-  instagram:      
-  flickr:
-  tumblr:  
-  google_plus:    
-  # orcid and google scholar IDs are different than standard username.
-  orcid: 
-  gscholar: 
+# Custom vars
+version:             1.0.0
 
-## sidebar links:
-# For external links add external: true
-links:
-  - title: Home
-    url: /
-  - title: About
-    url: /about/
-  - title: Blog
-    url: /blog/
-  - title: Tags
-    url: /tags/
-#  - title: <i class="fa fa-stream"></i> Category
-#    url: /category/
-  - title:  Archive
-    url: /archive/
-  - title: Contact
-    url: /contact/
-#  - title: <i class="iconside iconm-twitter"></i> Twitter
-#    url: https://twitter.com/abcd
-#    external: true
-  - title: Feed
-    url: /feed.xml
+plugins: [jekyll-paginate]
 
-category_title: Category
-category_dir: /category/
-# Google Custom Search:
-#google_search: xyz123abc
+# Tag setting
+#collections:
+#  tags:
+#    output: true
+#    permalink: /tags/:path/
 
-# Twitter stream widget:
-# Replace xyz123abc with your twitter widget id from https://twitter.com/settings/widgets
-#twitter_widget_id: xyz123abc
+#defaults:
+#  - scope:
+#      path: ''
+#      type: tags
+#    values:
+#      layout: tag
 
-# Add disqus username for Disqus comment board:
-disqus_shortname: foo
+#google_analytics:
+#  ua: 'UA-109898110-1'
 
-# Analytics and webmaster tools stuff goes here
-#google_analytics:   xyz123abc
+github:
+  repo: 'https://github.com/sudo-hoon/sudo-hoon.github.io'
 
-## END ##
+category_dir: category/
+tag_dir: tag/
+
+excerpt_separator: ""
