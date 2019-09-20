@@ -8,8 +8,9 @@ permalink:           pretty
 title:               '$ sudo hoon'
 tagline:             'System Software Engineer'
 description:         'Robot Navigation, Embedded linux...'
-url:                 https://sudo-hoon.github.io
-baseurl:             'https://sudo-hoon.github.io'
+url:                 https://sudo-hoon.github.io/
+baseurl:             https://sudo-hoon.github.io/
+urlimg:              https://sudo-hoon.github.io/images/
 paginate:            5
 markdown: kramdown
 highlighter: rouge
@@ -23,6 +24,29 @@ author:
   name:              KIM DO HOON
   url:               https://sudo-hoon.github.io
   email:             dohoon19.kim@gmail.com
+  avatar:            foo.png
+
+# Owner/author information
+owner:
+  name:           KIM DO HOON
+  avatar:         foo.png
+  #email:          
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        abcd
+  facebook:       
+  github:         xyz123abc
+  stackexchange:  
+  linkedin:       https://www.linkedin.com/in/foo
+  instagram:      
+  flickr:
+  tumblr:  
+  google_plus:    https://plus.google.com/+foo
+  # orcid and google scholar IDs are different than standard username.
+  orcid: xyz123abc
+  gscholar: xyz123abc
+
 
 # Custom vars
 version:             1.0.0
@@ -49,6 +73,6 @@ github:
   repo: 'https://github.com/sudo-hoon/sudo-hoon.github.io'
 
 category_dir: category/
-tag_dir: tag/
+tag_dir: tags/
 
 excerpt_separator: ""

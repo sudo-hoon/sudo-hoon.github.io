@@ -1,8 +1,34 @@
 ---
 layout: page
 title: About
+permalink: /about/
+show_meta: true
+# imagefeature path is relative to images/ directory.
+imagefeature: foo.png
+published: true
+description: "About example.com...."
+category: views
+comments: false
+mathjax: false
+noindex: false
+sitemap:
+    priority: 0.7
+    changefreq: 'monthly'
+    lastmod: 2016-02-13
+# tags will be used as html meta keywords.    
+tags:
 ---
 
-<p class="message">
-  웹 개발자 김태헌입니다. 프론트엔드 분야로 커리어를 쌓고 있습니다. 이 블로그를 만들 게 된 계기는 React 개발자로 이직을 하고 싶은데 실무 경험이 없다보니 이직할 때 보여줄 게 부족한 거 같아서 공부한 내용을 정리해서 보여주기라도 하자는 마음으로 만들었습니다. 
-</p>
+<div class="post-author text-center">                       
+  <img src="{{ site.urlimg }}{{ site.owner.avatar }}" alt="{{ site.owner.name }}'s photo" itemprop="image" class="post-avatar img-circle img-responsive"/> 
+</div>
+<!--
+    <span class="social-icons" style="padding-top: 10px; padding-bottom: 1px;">
+      <a href="{{ site.url }}/cv" title="Curriculum Vitae"><i class="fa fa-file" style="vertical-align: top;"></i></a>
+      <a href="{{ site.url }}/about/publications/" title="Publications"><i class="fa fa-book-open"></i></a>
+      <a href="{{ site.owner.linkedin }}" title="LinkedIn profile"><i class="fa fa-linkedin"></i></a>
+    </span>
+</div>
+-->
+
+TEST

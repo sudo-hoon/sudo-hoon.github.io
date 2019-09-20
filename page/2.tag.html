@@ -1,7 +1,7 @@
 ---
 layout: default
-title: tags
-permalink: /tag/
+title: Tag
+permalink: /tags/
 icon: th-list
 type: page
 ---
@@ -12,7 +12,7 @@ type: page
 <div id="post-list">
   <h1>{{page.title}}</h1>
   <hr>
-  <h2 id="{{category | first}}">{{ esc_tagname }}</h2>
+  <h2 id="{{tags | first}}">{{ esc_tagname }}</h2>
   <ul>
     <li v-for="p in posts" v-if="p.tags.indexOf(hash) != -1">
       <time>
