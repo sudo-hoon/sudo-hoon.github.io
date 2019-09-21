@@ -66,8 +66,8 @@ plugins: [jekyll-paginate]
 #    values:
 #      layout: tag
 
-#google_analytics:
-#  ua: 'UA-109898110-1'
+google_analytics:
+  ua: 'UA-148449149-1'
 
 github:
   repo: 'https://github.com/sudo-hoon/sudo-hoon.github.io'
