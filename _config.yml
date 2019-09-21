@@ -51,7 +51,10 @@ owner:
 # Custom vars
 version:             1.0.0
 
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+#  - jekyll-sitemap
+#  - jekyll-feed
 
 # Tag setting
 #collections:
@@ -66,8 +69,7 @@ plugins: [jekyll-paginate]
 #    values:
 #      layout: tag
 
-google_analytics:
-  ua: 'UA-148449149-1'
+google_analytics: 'UA-148449149-1'
 
 github:
   repo: 'https://github.com/sudo-hoon/sudo-hoon.github.io'

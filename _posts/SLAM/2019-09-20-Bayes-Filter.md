@@ -3,6 +3,7 @@ layout: post
 title: "Bayes Filter"
 date: "2019-09-20"
 # slug: "example_content"
+imagefeature: foo.png
 description: "This post is based on SLAM lecture"
 category: 
   - SLAM
@@ -12,6 +13,7 @@ tags:
   - Robot mapping
 comments: true
 use_math: true
+show_meta: true
 ---
 
 > 본 게시글은 Cyrill Stachniss의 [Robot mapping(WS 2013/14)](http://ais.informatik.uni-freiburg.de/teaching/ws13/mapping/) 강의를 요약 및 정리한 글입니다. 
@@ -118,7 +120,7 @@ use_math: true
 - Sensor model : $\begin{pmatrix} r_t^i \\ \phi_t^i \end{pmatrix} = \begin{pmatrix} \sqrt{(m_{j,x}-x)^2 + (m_{j,y}-y)^2} \\ atan2(m_{j,y}-y, m_{j,x}-x) -\theta \end{pmatrix} + Q_t$
 - $Q_t$는 sensor noise, 미리 modeling 된 노이즈   
 
-
+----
 > [^1]: $P(A\|B) = \frac{P(B\|A)P(A)}{P(B)} = \frac {P(A,B)}{P(B)}$,  https://darkpgmr.tistory.com/119 참고  
 > [^2]: horisontal angle, https://en.wikipedia.org/wiki/Bearing\_(navigation) 참고
 

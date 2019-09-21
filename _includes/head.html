@@ -2,6 +2,9 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="google-site-verification" content="QJt0BIhGk4blZcRDdRjvEQdGwjG4EaUueDYMGCatOrQ" />
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
 
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -17,7 +20,7 @@
 
   
   <!-- Open Graph -->
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="ko">
   <meta property="og:type" content="article">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.content %}{{ page.content | strip_html | truncatewords: 50 }}{% else %}{{ site.description }}{% endif %}">
@@ -32,9 +35,12 @@
   <meta property="og:image" content="{{ domain }}{{ page.imagefeature }}">{% else %}
   <meta property="og:image" content="{% if page.imagesummary %}{{ site.urlimg }}{{ page.imagesummary }}{% else %}{{ site.urlimg }}{{ site.default_logo }}{% endif %}">{% endif %}
   {% if page.videofeature %}<meta property="og:video" content="{{ page.videofeature }}">{% endif %}
+  <meta property="og:image:width" content="420" />
+  <meta property="og:image:height" content="420" /> 
   <meta property="fb:app_id" content="1003108156422006">
   <meta property="fb:admins" content="817465054">
-
+  <meta property="og:image:type" content="image/png">
+  
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.url }}/public/css/poole.css">
   <link rel="stylesheet" href="{{ site.url }}/public/css/syntax.css">
@@ -72,10 +78,8 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  {% if site.google_analytics != null %}
   {% include google_analytics.html %}
-  {% endif %}
-
+ 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.0/axios.min.js"></script>
 

@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .container {
-  max-width: 70rem;
+  max-width: 50rem;
 }
 @media (min-width: 38em) {
   .container {
@@ -211,11 +211,7 @@ a.sidebar-nav-item:focus {
 
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
-  position: absolute;
-  opacity: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  display: none;
 }
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
@@ -569,4 +565,4 @@ a.pagination-item:hover {
 /* Only one tweak for a reverse layout */
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
-}
+} 

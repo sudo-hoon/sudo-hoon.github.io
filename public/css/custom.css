@@ -62,6 +62,7 @@ span.social-icons{display:block;padding-top:.5px;padding-bottom:20px}
 .social-icons a{color:#999}
 .social-icons{display:block;padding-top:.5px;padding-bottom:20px}
 
+img.alignleft{float:left} img.alignright{float:right} img.aligncenter{display:block;margin:0 auto}
 
 
 /* Share Bar */
