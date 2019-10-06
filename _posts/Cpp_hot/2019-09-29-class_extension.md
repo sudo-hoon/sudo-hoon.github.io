@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ Class의 완성"
+title: "C++ Class2"
 date: "2019-09-29"
 # slug: "example_content"
 description: "C++ 기본적인 내용 정리"
@@ -18,7 +18,7 @@ use_math: true
 > 본 게시글은 윤성우님의 C++ 열혈 강의를 요약 정리한 글 입니다.   
 > 틀린 내용이 있다면 지적 부탁드립니다.
 
-# C++ Class 기본 정리
+# C++ Class2
 
 ----
 

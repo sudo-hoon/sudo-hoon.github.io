@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ Class의 완성"
+title: "C++ 상속"
 date: "2019-09-29"
 # slug: "example_content"
 description: "C++ 기본적인 내용 정리"
@@ -286,9 +286,9 @@ int main()
 
 ### 참조자
 
-- 참조자의 선언 타입에 따라 호출되는 함수 역시 달라진다.
-- `AAA & sref = new BBB` 일때, 호출되는 함수는 AAA의 함수이다.
-  - 이 역시도 virtual 선언을 통해서 BBB의 함수가 호출되게 할 수 있다.
+- 참조자의 선언 타입에 따라 호출되는 멤버 함수 역시 달라진다.
+- `AAA & sref = new BBB` 일때, 호출되는 함수는 AAA의 멤버 함수이다.
+  - 이 역시도 virtual 선언을 통해서 BBB의 멤버 함수가 호출되게 할 수 있다.
 
 ## 5. 다형성(Polymorphism)
 
