@@ -271,10 +271,14 @@ int main()
   }
   ```
 
-  - 이는 클래스의 몸체가 정의 되지 않았음을 의미한다.
+  - `virtual ~~~ =0`은 클래스의 멤버 함수가 정의 되지 않았음을 의미한다.
+    - 즉, 이후에 상속하는 객체가 해당 순수 가상 함수를 정의할 것이라고 의미를 주는 것.
   - `Employee * emp = new Employee("KDK")` 로 객체를 생성하면 컴파일 에러가 발생한다.
     - 하나 이상의 순수 가상 함수가 선언되면 컴파일 에러가 발생한다.
     - 이러한 클래스를 __Abstract Class__라 한다.
+    - 꼭 상속을 받아서 객체를 생성해야한다.
+  - 순수 가상함수들로 구성된 class를 __interface__라 한다.
+    - interface는 polymolphism 관점에서 사용된다.
 
 ### 가상 소멸자
 
@@ -295,3 +299,39 @@ int main()
 - 위와 같은 가상 함수 호출 관계에서의 특성을 다형성이라 한다.
   - 즉, 모양은 같은데 형태는 다르다.
   - 선언되는 데이터 타입에 따라 호출되는 클래스의 함수가 다른 것 같은 상황을 의미.
+
+
+
+## 6. 기타
+
+- 상속은 얕은 상속이 좋다.
+  - 꼭 상속을 쓰지 않아도 될 떄는 클래스 안에 다른 클래스의 객체를 멤버 변수로 including하는 방식이 좋다.
+
+### Strategy pattern
+
+```cpp
+#include <iostream >
+using std :: cout; using std :: endl;
+struct Strategy { // Saving space , should be classes.
+virtual void Print () const = 0;
+};
+struct StrategyA : public Strategy {
+void Print () const override { cout << "A" << endl; }
+};
+struct StrategyB : public Strategy {
+ void Print () const override { cout << "B" << endl; }
+};
+struct MyStruct {
+ MyStruct(const Strategy& s): strategy_ (s) {}
+ void Print () const { strategy_ .Print (); }
+ const Strategy& strategy_ ;
+};
+int main () {
+ // Create a local var of MyStruct and call its Print
+ MyStruct( StrategyA ()).Print ();
+ MyStruct( StrategyB ()).Print ();
+}
+```
+
+- 위와 같이 interface를 통해 같은 명령어(Class_object.print())로 다른 기능을 표현할 수 있다.
+  - 예를 들어서 device가 i2c와 spi를 지원할 때, open 명령어를 만들고 그것을 stategy pattern으로 구현할 수 있다.
