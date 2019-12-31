@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fast SLAM"
+title: "Fast SLAM - Feature-Based SLAM with Particle Filters"
 date: "2019-11-06"
 
 # slug: "example_content"

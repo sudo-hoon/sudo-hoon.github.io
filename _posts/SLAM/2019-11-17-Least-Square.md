@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fast SLAM - Grid base"
+title: "Least Squares"
 date: "2019-11-14"
 
 # slug: "example_content"
