@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Motion Planning"
+title: "A*(A star) and D*(D star) lite Algorithm"
 date: "2019-12-27"
 # slug: "example_content"
 description: "Motion Planning"
@@ -12,7 +12,7 @@ tags:
   - Robot
 comments: true
 use_math: true
-# ![](/images/posts/cpp_hot/img1.png){:.aligncenter}
+# ![](/images/posts/MotionPlanning/img1.png){:.aligncenter}
 # hyperlink : [name](url)
 ---
 # Motion Planning
@@ -26,7 +26,7 @@ use_math: true
 
 ### 문제 정의 
 
-![image-20191227071056688](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191227071056688.png)
+![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191227071056688.png){:.aligncenter}
 
 - __vertex__ : node, 로봇이 거치는 하나의 pose
 
@@ -62,7 +62,9 @@ use_math: true
 
 ### graph Representation
 
-![image-20191227072201708](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191227072201708.png)
+![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191227071056688.png){:.aligncenter}
+
+![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191227072201708.png){:.aligncenter}
 
 - robot이 움직일 수 있는 방법에 따라 Graph의 edge를 표현할 수 있다.
 
@@ -116,29 +118,33 @@ use_math: true
 
 ### Idea
 
-![image-20191227073116871](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191227073116871.png)
+![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191227073116871.png){:.aligncenter}
 
 ### Incremental Search
 
 - 초기 searching
 
-- ![image-20191227073433987](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191227073433987.png)
+- ![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191227073433987.png){:.aligncenter}
+  
   - 초기에는 complete search와 incremental search가 순회하는 노드량이 같다.
+  
 - map update후의 searching
 
-- ![image-20191227073516665](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191227073516665.png)
+- ![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191227073516665.png){:.aligncenter}
   - re-planning시, incremental search의 경우가 순회하는 노드의 갯수가 훨씬 적다.
   - Incremental search의 경우에 초기 searching은 많은 방문(즉, 많은 계산)이 필요하지만 이후 map udate 이후에는 빠르게 re-planning을 할 수 있다.
+
 
 ## D* lite algorithm Problem definition
 
 - 알고리즘
-  - ![image-20191228214416354](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191228214416354.png)
+  - ![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191228214416354.png){:.aligncenter}
   - 위의 과정을 이해하려면 문제에 대한 정의를 이해해야한다.
 
 ### node selection
 
-- ![image-20191227075305036](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191227075305036.png)
+![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191227075305036.png){:.aligncenter}
+
 - __total cost__가 작은 node가 첫 번째 우선 순위를 갖는다.
 - __cost-so-far($g(s_k)$, heuristic)__ 가 작은 node가 다음 우선 순위를 갖는다.
 - 위 상황에서는 $s_1, s_2$모두 total cost가 갖지만 $s_2$가 cost-so-far가 작기 때문에 $s_2$ 노드가 선택된다. 
@@ -150,11 +156,11 @@ use_math: true
 
 - __path cost, $g(s)$__ at D* : goal node에서 부터 s 노드까지의 cost의 합
   - A* algorithm에서는 path cost를 start node에서 s node까지의 총 cost의 합으로 정의했다.
-  - ![image-20191228214555383](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191228214555383.png)
+  - ![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191228214555383.png){:.aligncenter}
     - D* 에서는 re-planning시 start node의 위치를 현재 로봇의 pose로 옮긴다. 
     - 이때, $g(s)$는 보존되지 않는다. 즉, 값이 변경된다.
     - Case1에서 Case2로 변화할 때, $g(s)$의 값은 변한다.
-  - ![image-20191228215003981](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191228215003981.png)
+  - ![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191228215003981.png){:.aligncenter}
     - 만약 위와 같이 path cost를 goal에서 부터 s까지의 weight로 정의를 하면 path cost는 보존된다.
 - __heuristic, h(s)__ : start node에서 s node까지 추정되는 거리
   - 이 부분은 start node가 변경될 때마다 재 계산된다.
@@ -182,21 +188,21 @@ use_math: true
 
   - priority queue의 key : <$min[g(s), rhs(s)] + h(s), min[g(s), rhs(s)]$>
     - 정확히는 <$min[g(s), rhs(s)] + h(s) +k_m, min[g(s), rhs(s)]$>
-  - ![image-20191228224259157](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191228224259157.png)
-
+  - ![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191228224259157.png){:.aligncenter}
+  
 - __expanding__ : priority queue에서 노드를 하나 꺼내고 해당 노드의 g 값을 재 계산하는 것
 
   - 이때, locally consistency에 따른 action을 취한다.
 
-  - ![image-20191228224356677](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191228224356677.png)
+  - ![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191228224356677.png){:.aligncenter}
 
   - > __왜 굳이 g node와 rhs node를 분리해서 계산하는가?__
     >
     > 1. rhs 값은 expansion 하기전에 여러번 바뀔 수 있다.
     >    - 아래에서 under consistent 상황 참고.
-    >
+  >
     > 2. make sure that we have updated all successors that could lower the total cost f(s) first
-
+  
   - g 값의 계산은 아래 locally inconsistency에서 다룬다.
 
 ### locally inconsistency
@@ -260,7 +266,7 @@ use_math: true
 
 ### 알고리즘
 
-![image-20191228214416354](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191228214416354.png)
+![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191228214416354.png){:.aligncenter}
 
 ```
 1. 모든 노드의 g(s)를 unexpanded로 설정한다.
@@ -301,7 +307,7 @@ __4-b. 변화된 edge에 연결된 모든 node들을 update한다.__
 
 __D* lite mathematical Algorithm__
 
-![image-20191228233634664](D:\Workspace\Blog\sudo-hoon.github.io\_posts\Motion Planning\2019-12-27-Motion-Planning.assets\image-20191228233634664.png)
+![](/images/posts/MotionPlanning/2019-12-27-Motion-Planning.assets\image-20191228233634664.png){:.aligncenter}
 
 - __key value of priority queue__ : <$min[g(s), rhs(s)] + h(s) +k_m, min[g(s), rhs(s)]$>
 
@@ -323,10 +329,3 @@ __D* lite mathematical Algorithm__
 
 - https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-412j-cognitive-robotics-spring-2016/lecture-notes/MIT16_412JS16_L14.pdf 
   - 108p ~ 143p
-
-
-
-
-
-## Rapidly Random Tree
-
